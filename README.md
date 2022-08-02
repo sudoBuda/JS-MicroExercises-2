@@ -4,7 +4,7 @@
 ## Training:
 
 -  [x] Write a program that asks for two numbers and writes to the screen which is the greater.
--  [ ] Write a program that asks for 3 numbers and writes the largest of the three to the screen.
+-  [x] Write a program that asks for 3 numbers and writes the largest of the three to the screen.
 -  [ ] Write a program that asks for a number and tells if it is divisible by 2
 -  [ ] Write a program that asks for a phrase and writes how many times the letter a appears.
 -  [ ] Write a program that asks for a phrase and writes the vowels that appear
@@ -19,6 +19,9 @@
 ## Requirement:
 - Use javascript
 - The screen output must be done in the browser (Terminal not)
+
+## Extra: 
+- I have used buttons to trigger the function that was requested in the exercise.
 
 
 
