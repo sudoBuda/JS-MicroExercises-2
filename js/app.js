@@ -1,5 +1,6 @@
 const firstContainer = document.getElementById("firstExercise");
 const secondContainer = document.getElementById("secondExercise");
+const thirdContainer = document.getElementById("thirdExercise");
 
 function printResults(container, text) {
 	container.innerHTML += text;
@@ -57,4 +58,14 @@ secondExercise.addEventListener("click", () => {
 		secondContainer,
 		`The larger of ${num1},  ${num2} and ${num3} is ${result}`
 	);
+});
+
+const thirdExercise = document.querySelector(".thirdExercise");
+thirdExercise.addEventListener("click", () => {
+	let n1 = parseInt(window.prompt("Escribe un número"));
+	if (n1 % 2 === 0) {
+		printResults(thirdContainer, `The number ${n1} is divisible by 2`);
+	} else {
+		printResults(thirdContainer, `The number ${n1} is not divisible by 2`);
+	}
 });

@@ -5,7 +5,7 @@
 
 -  [x] Write a program that asks for two numbers and writes to the screen which is the greater.
 -  [x] Write a program that asks for 3 numbers and writes the largest of the three to the screen.
--  [ ] Write a program that asks for a number and tells if it is divisible by 2
+-  [x] Write a program that asks for a number and tells if it is divisible by 2
 -  [ ] Write a program that asks for a phrase and writes how many times the letter a appears.
 -  [ ] Write a program that asks for a phrase and writes the vowels that appear
 -  [ ] Write a program that asks for a phrase and writes how many vowels are in the phrase.
