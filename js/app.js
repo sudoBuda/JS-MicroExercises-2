@@ -1,6 +1,7 @@
 const firstContainer = document.getElementById("firstExercise");
 const secondContainer = document.getElementById("secondExercise");
 const thirdContainer = document.getElementById("thirdExercise");
+const fourthContainer = document.getElementById("fourthExercise");
 
 function printResults(container, text) {
 	container.innerHTML += text;
@@ -62,10 +63,30 @@ secondExercise.addEventListener("click", () => {
 
 const thirdExercise = document.querySelector(".thirdExercise");
 thirdExercise.addEventListener("click", () => {
-	let n1 = parseInt(window.prompt("Escribe un número"));
-	if (n1 % 2 === 0) {
-		printResults(thirdContainer, `The number ${n1} is divisible by 2`);
+	let num1 = parseInt(window.prompt("Escribe un número"));
+	if (num1 % 2 === 0) {
+		printResults(thirdContainer, `The number ${num1} is divisible by 2`);
 	} else {
-		printResults(thirdContainer, `The number ${n1} is not divisible by 2`);
+		printResults(
+			thirdContainer,
+			`The number ${num1} is not divisible by 2`
+		);
 	}
+});
+
+const fourthExercise = document.querySelector(".fourthExercise");
+fourthExercise.addEventListener("click", () => {
+	let text = window.prompt("Escribe una frase");
+	var numchar = text.length;
+	text = text.toUpperCase();
+	var car;
+	var contador = 0;
+	var i;
+	for (i = 0; i < numchar; i++) {
+		car = text.charAt(i);
+		if (car == "A") {
+			contador++;
+		}
+	}
+	printResults(fourthContainer, `The letter "a" appears: ${contador} times`);
 });
