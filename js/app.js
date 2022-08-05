@@ -2,6 +2,7 @@ const firstContainer = document.getElementById("firstExercise");
 const secondContainer = document.getElementById("secondExercise");
 const thirdContainer = document.getElementById("thirdExercise");
 const fourthContainer = document.getElementById("fourthExercise");
+const fifthContainer = document.getElementById("fifthExercise");
 
 function printResults(container, text) {
 	container.innerHTML += text;
@@ -77,16 +78,94 @@ thirdExercise.addEventListener("click", () => {
 const fourthExercise = document.querySelector(".fourthExercise");
 fourthExercise.addEventListener("click", () => {
 	let text = window.prompt("Escribe una frase");
-	var numchar = text.length;
+	var numChar = text.length;
 	text = text.toUpperCase();
-	var car;
+	var char;
 	var contador = 0;
 	var i;
-	for (i = 0; i < numchar; i++) {
-		car = text.charAt(i);
-		if (car == "A") {
+	for (i = 0; i < numChar; i++) {
+		char = text.charAt(i);
+		if (char == "A") {
 			contador++;
 		}
 	}
 	printResults(fourthContainer, `The letter "a" appears: ${contador} times`);
 });
+
+const fifthExercise = document.querySelector(".fifthExercise");
+fifthExercise.addEventListener("click", () => {
+	var a = (e = i = o = u = space = 0);
+	vectorChar = takeText();
+
+	function takeText() {
+		var text = window.prompt("escribe un texto cualquiera");
+		var splitedText = text.toLowerCase().split("");
+		return splitedText;
+	}
+
+	for (index = 0; index < vectorChar.length; index++) {
+		switch (vectorChar[index]) {
+			case "a":
+			case "à":
+			case "á":
+				a++;
+				break;
+			case "e":
+			case "é":
+			case "è":
+				e++;
+				break;
+			case "i":
+			case "í":
+			case "ì":
+				i++;
+				break;
+			case "o":
+			case "ó":
+			case "ò":
+				o++;
+				break;
+			case "u":
+			case "ú":
+			case "ù":
+				u++;
+				break;
+			case " ":
+				space++;
+		}
+	}
+
+	totalVowels = a + e + i + o + u;
+
+	document.write("Hay " + a + " vocales 'a'<br>");
+	document.write("Hay " + e + " vocales 'e'<br>");
+	document.write("Hay " + i + " vocales 'i'<br>");
+	document.write("Hay " + o + " vocales 'o'<br>");
+	document.write("Hay " + u + " vocales 'u'<br>");
+
+	document.write("<br>");
+	document.write("Total de vocales: " + totalVowels);
+	document.write("<br>");
+	document.write("Total de espacios en blanco: " + space);
+	document.write("<br>");
+	document.write("Total de carácteres escritos: " + vectorChar.length);
+	document.write("<br>");
+	document.write("Texto original: <b>" + vectorChar.join("") + "</b>");
+});
+
+// const fifthExercise = document.querySelector(".fifthExercise");
+// fifthExercise.addEventListener("click", () => {
+// 	let text = window.prompt("Escribe una frase");
+// 	var numChar = text.length;
+// 	text = text.toUpperCase();
+// 	var char;
+// 	var contador = 0;
+// 	var i;
+// 	for (i = 0; i < numChar; i++) {
+// 		char = text.charAt(i);
+// 		if (char == "A") {
+// 			contador++;
+// 		}
+// 	}
+// 	printResults(fourthContainer, `The letter "a" appears: ${contador} times`);
+// });

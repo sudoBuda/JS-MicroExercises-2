@@ -7,7 +7,7 @@
 -  [x] Write a program that asks for 3 numbers and writes the largest of the three to the screen.
 -  [x] Write a program that asks for a number and tells if it is divisible by 2
 -  [x] Write a program that asks for a phrase and writes how many times the letter a appears.
--  [ ] Write a program that asks for a phrase and writes the vowels that appear
+-  [x] Write a program that asks for a phrase and writes the vowels that appear
 -  [ ] Write a program that asks for a phrase and writes how many vowels are in the phrase.
 -  [ ] Write a program that asks for a phrase and writes how many times each of the vowels appears
 -  [ ] Write a program that asks for a number and tells us if it is divisible by 2, 3, 5 or 7 (you just have to check if it is divisible by one of the four)
@@ -22,9 +22,6 @@
 
 ## Extra: 
 - I have used buttons to trigger the function that was requested in the exercise.
-
-
-
 
 ![Logo](https://cdn.discordapp.com/attachments/977641039953293362/1003255488294682644/budaFondo.png)
 
