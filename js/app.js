@@ -137,20 +137,26 @@ fifthExercise.addEventListener("click", () => {
 
 	totalVowels = a + e + i + o + u;
 
-	document.write("Hay " + a + " vocales 'a'<br>");
-	document.write("Hay " + e + " vocales 'e'<br>");
-	document.write("Hay " + i + " vocales 'i'<br>");
-	document.write("Hay " + o + " vocales 'o'<br>");
-	document.write("Hay " + u + " vocales 'u'<br>");
+	printResults(fifthContainer, `<br>Hay ${a} vocales 'a'<br>`);
+	printResults(fifthContainer, `Hay ${e} vocales 'e'<br>`);
+	printResults(fifthContainer, `Hay ${i} vocales 'i'<br>`);
+	printResults(fifthContainer, `Hay ${o} vocales 'o'<br>`);
+	printResults(fifthContainer, `Hay ${u} vocales 'u'<br>`);
 
-	document.write("<br>");
-	document.write("Total de vocales: " + totalVowels);
-	document.write("<br>");
-	document.write("Total de espacios en blanco: " + space);
-	document.write("<br>");
-	document.write("Total de carácteres escritos: " + vectorChar.length);
-	document.write("<br>");
-	document.write("Texto original: <b>" + vectorChar.join("") + "</b>");
+	printResults(fifthContainer, "<br>");
+	printResults(fifthContainer, `Total de vocales: ${totalVowels}`);
+	printResults(fifthContainer, "<br>");
+	printResults(fifthContainer, `Total de espacios en blanco: ${space}`);
+	printResults(fifthContainer, "<br>");
+	printResults(
+		fifthContainer,
+		`Total de carácteres escritos: ${vectorChar.length}`
+	);
+	printResults(fifthContainer, "<br>");
+	printResults(
+		fifthContainer,
+		`Texto original: <b> ${vectorChar.join("")}</b>`
+	);
 });
 
 // const fifthExercise = document.querySelector(".fifthExercise");
