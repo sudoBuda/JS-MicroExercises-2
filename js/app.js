@@ -3,6 +3,7 @@ const secondContainer = document.getElementById("secondExercise");
 const thirdContainer = document.getElementById("thirdExercise");
 const fourthContainer = document.getElementById("fourthExercise");
 const fifthContainer = document.getElementById("fifthExercise");
+const sixthContainer = document.getElementById("sixthExercise");
 
 function printResults(container, text) {
 	container.innerHTML += text;
@@ -82,9 +83,9 @@ fourthExercise.addEventListener("click", () => {
 	text = text.toUpperCase();
 	var char;
 	var contador = 0;
-	var i;
-	for (i = 0; i < numChar; i++) {
-		char = text.charAt(i);
+	var index;
+	for (index = 0; index < numChar; index++) {
+		char = text.charAt(index);
 		if (char == "A") {
 			contador++;
 		}
@@ -159,19 +160,17 @@ fifthExercise.addEventListener("click", () => {
 	);
 });
 
-// const fifthExercise = document.querySelector(".fifthExercise");
-// fifthExercise.addEventListener("click", () => {
-// 	let text = window.prompt("Escribe una frase");
-// 	var numChar = text.length;
-// 	text = text.toUpperCase();
-// 	var char;
-// 	var contador = 0;
-// 	var i;
-// 	for (i = 0; i < numChar; i++) {
-// 		char = text.charAt(i);
-// 		if (char == "A") {
-// 			contador++;
-// 		}
-// 	}
-// 	printResults(fourthContainer, `The letter "a" appears: ${contador} times`);
-// });
+const sixthExercise = document.querySelector(".sixthExercise");
+sixthExercise.addEventListener("click", () => {
+	var number = parseInt(window.prompt("Escribe un número"));
+	if (
+		number % 2 === 0 ||
+		number % 3 === 0 ||
+		number % 5 === 0 ||
+		number % 7 === 0
+	) {
+		printResults(sixthContainer, `${number} is divisible by 2, 3, 5 or 7`);
+	} else {
+		printResults(sixthContainer, `${number} not divisible by 2, 3, 5 or 7`);
+	}
+});
