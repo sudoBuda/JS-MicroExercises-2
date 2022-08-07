@@ -169,8 +169,27 @@ sixthExercise.addEventListener("click", () => {
 		number % 5 === 0 ||
 		number % 7 === 0
 	) {
-		printResults(sixthContainer, `${number} is divisible by 2, 3, 5 or 7`);
+		printResults(
+			sixthContainer,
+			`<br>The number ${number} is divisible by 2, 3, 5 or 7: `
+		);
+
+		if (number % 2 === 0) {
+			printResults(sixthContainer, `<br>is divisible by 2.`);
+		}
+		if (number % 3 === 0) {
+			printResults(sixthContainer, `<br>is divisible by 3.`);
+		}
+		if (number % 5 === 0) {
+			printResults(sixthContainer, `<br>is divisible by 5.`);
+		}
+		if (number % 7 === 0) {
+			printResults(sixthContainer, `<br>is divisible by 7.`);
+		}
 	} else {
-		printResults(sixthContainer, `${number} not divisible by 2, 3, 5 or 7`);
+		printResults(
+			sixthContainer,
+			`The number ${number} isn't divisible by 2, 3, 5 or 7`
+		);
 	}
 });
