@@ -4,6 +4,7 @@ const thirdContainer = document.getElementById("thirdExercise");
 const fourthContainer = document.getElementById("fourthExercise");
 const fifthContainer = document.getElementById("fifthExercise");
 const sixthContainer = document.getElementById("sixthExercise");
+const seventhContainer = document.getElementById("seventhExercise");
 
 function printResults(container, text) {
 	container.innerHTML += text;
@@ -191,5 +192,16 @@ sixthExercise.addEventListener("click", () => {
 			sixthContainer,
 			`The number ${number} isn't divisible by 2, 3, 5 or 7`
 		);
+	}
+});
+
+const seventhExercise = document.querySelector(".seventhExercise");
+seventhExercise.addEventListener("click", () => {
+	var num = window.prompt("Escribe un número");
+	var index;
+	for (index = 2; index < num / 2; index++) {
+		if (num % index === 0) {
+			document.write(index, ", ");
+		}
 	}
 });
