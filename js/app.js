@@ -5,6 +5,7 @@ const fourthContainer = document.getElementById("fourthExercise");
 const fifthContainer = document.getElementById("fifthExercise");
 const sixthContainer = document.getElementById("sixthExercise");
 const seventhContainer = document.getElementById("seventhExercise");
+const eighthContainer = document.getElementById("eighthExercise");
 
 function printResults(container, text) {
 	container.innerHTML += text;
@@ -96,7 +97,7 @@ fourthExercise.addEventListener("click", () => {
 
 const fifthExercise = document.querySelector(".fifthExercise");
 fifthExercise.addEventListener("click", () => {
-	var a = (e = i = o = u = space = 0);
+	var a = (e = index = o = u = space = 0);
 	vectorChar = takeText();
 
 	function takeText() {
@@ -117,10 +118,10 @@ fifthExercise.addEventListener("click", () => {
 			case "è":
 				e++;
 				break;
-			case "i":
+			case "index":
 			case "í":
 			case "ì":
-				i++;
+				index++;
 				break;
 			case "o":
 			case "ó":
@@ -137,11 +138,11 @@ fifthExercise.addEventListener("click", () => {
 		}
 	}
 
-	totalVowels = a + e + i + o + u;
+	totalVowels = a + e + index + o + u;
 
 	printResults(fifthContainer, `<br>Hay ${a} vocales 'a'<br>`);
 	printResults(fifthContainer, `Hay ${e} vocales 'e'<br>`);
-	printResults(fifthContainer, `Hay ${i} vocales 'i'<br>`);
+	printResults(fifthContainer, `Hay ${index} vocales 'index'<br>`);
 	printResults(fifthContainer, `Hay ${o} vocales 'o'<br>`);
 	printResults(fifthContainer, `Hay ${u} vocales 'u'<br>`);
 
@@ -202,6 +203,24 @@ seventhExercise.addEventListener("click", () => {
 	for (index = 2; index < num / 2; index++) {
 		if (num % index === 0) {
 			printResults(seventhContainer, `${index} , `);
+		}
+	}
+});
+
+const eighthExercise = document.querySelector(".eighthExercise");
+eighthExercise.addEventListener("click", () => {
+	var num1 = prompt("Escribe un número");
+	var num2 = prompt("Escribe otro número");
+	var minor;
+	var index;
+	if (num1 < num2) {
+		minor = num1;
+	} else {
+		minor = num2;
+	}
+	for (index = 2; index < minor / 2; index++) {
+		if (num1 % index === 0 && num2 % index === 0) {
+			printResults(eighthContainer, `${index} , `);
 		}
 	}
 });
