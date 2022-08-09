@@ -201,7 +201,7 @@ seventhExercise.addEventListener("click", () => {
 	var index;
 	for (index = 2; index < num / 2; index++) {
 		if (num % index === 0) {
-			document.write(index, ", ");
+			printResults(seventhContainer, `${index} , `);
 		}
 	}
 });
