@@ -6,6 +6,7 @@ const fifthContainer = document.getElementById("fifthExercise");
 const sixthContainer = document.getElementById("sixthExercise");
 const seventhContainer = document.getElementById("seventhExercise");
 const eighthContainer = document.getElementById("eighthExercise");
+const ninethContainer = document.getElementById("ninethExercise");
 
 function printResults(container, text) {
 	container.innerHTML += text;
@@ -81,11 +82,11 @@ thirdExercise.addEventListener("click", () => {
 const fourthExercise = document.querySelector(".fourthExercise");
 fourthExercise.addEventListener("click", () => {
 	let text = window.prompt("Escribe una frase");
-	var numChar = text.length;
+	let numChar = text.length;
 	text = text.toUpperCase();
-	var char;
-	var contador = 0;
-	var index;
+	let char;
+	let contador = 0;
+	let index;
 	for (index = 0; index < numChar; index++) {
 		char = text.charAt(index);
 		if (char == "A") {
@@ -97,12 +98,12 @@ fourthExercise.addEventListener("click", () => {
 
 const fifthExercise = document.querySelector(".fifthExercise");
 fifthExercise.addEventListener("click", () => {
-	var a = (e = index = o = u = space = 0);
+	let a = (e = index = o = u = space = 0);
 	vectorChar = takeText();
 
 	function takeText() {
-		var text = window.prompt("escribe un texto cualquiera");
-		var splitedText = text.toLowerCase().split("");
+		let text = window.prompt("escribe un texto cualquiera");
+		let splitedText = text.toLowerCase().split("");
 		return splitedText;
 	}
 
@@ -164,7 +165,11 @@ fifthExercise.addEventListener("click", () => {
 
 const sixthExercise = document.querySelector(".sixthExercise");
 sixthExercise.addEventListener("click", () => {
-	var number = parseInt(window.prompt("Escribe un número"));
+	let number = parseInt(
+		window.prompt(
+			"Escribe un número, veremos si es dibisible por 2, 3, 5 o 7"
+		)
+	);
 	if (
 		number % 2 === 0 ||
 		number % 3 === 0 ||
@@ -198,8 +203,8 @@ sixthExercise.addEventListener("click", () => {
 
 const seventhExercise = document.querySelector(".seventhExercise");
 seventhExercise.addEventListener("click", () => {
-	var num = window.prompt("Escribe un número");
-	var index;
+	let num = window.prompt("Escribe un número");
+	let index;
 	for (index = 2; index < num / 2; index++) {
 		if (num % index === 0) {
 			printResults(seventhContainer, `${index} , `);
@@ -209,10 +214,10 @@ seventhExercise.addEventListener("click", () => {
 
 const eighthExercise = document.querySelector(".eighthExercise");
 eighthExercise.addEventListener("click", () => {
-	var num1 = prompt("Escribe un número");
-	var num2 = prompt("Escribe otro número");
-	var minor;
-	var index;
+	let num1 = window.prompt("Escribe un número");
+	let num2 = window.prompt("Escribe otro número");
+	let minor;
+	let index;
 	if (num1 < num2) {
 		minor = num1;
 	} else {
@@ -222,5 +227,19 @@ eighthExercise.addEventListener("click", () => {
 		if (num1 % index === 0 && num2 % index === 0) {
 			printResults(eighthContainer, `${index} , `);
 		}
+	}
+});
+
+const ninethExercise = document.querySelector(".ninethExercise");
+ninethExercise.addEventListener("click", () => {
+	let num = window.prompt("Escribe un número");
+	let index = 2;
+	while (num % index !== 0 && index < num / 2) {
+		index++;
+	}
+	if (num % index !== 0) {
+		printResults(ninethContainer, `Number ${num} is prime`);
+	} else {
+		printResults(ninethContainer, `Number ${num} isn't prime`);
 	}
 });
